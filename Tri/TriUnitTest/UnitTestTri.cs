@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestTri
+namespace TriUnitTest
 {
     [TestClass]
     public class UnitTestTri
@@ -76,7 +76,7 @@ namespace UnitTestTri
             Point pointb = new Point(2, 3);
             Point pointc = new Point(3, 5);
             Point[] pointArray;
-            pointArray = new Point[] {pointa, pointb, pointc};
+            pointArray = new Point[] { pointa, pointb, pointc };
             Triangle tria = new Triangle(pointArray);
             
         }
