@@ -59,6 +59,16 @@ public class Triangle {
       return true;
     return false;
   }
+
+  public bool isSidesMoreThanZero() {
+      if (sides[0] > 0 && sides[1] > 0 && sides[2] > 0)
+      {
+          return true;
+      }
+      else {
+          return false;
+      }
+  }
 }
 
 /* Exempel på användning: */

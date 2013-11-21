@@ -48,15 +48,34 @@ namespace UnitTestTri
             Assert.IsFalse(tria.isScalene());
         }
 
+        [TestMethod] // testar om isSidesMoreThanZero returnerar true för en giltig triangel
+        public void isSidesMoreThanZeroTest()
+        {
+            Triangle tria = new Triangle(2.2, 3.2, 2.2);
+            Assert.IsTrue(tria.isSidesMoreThanZero());
+        }
+
+        [TestMethod] // testar om isSidesMoreThanZero returnerar false för en triangel med sidan 0
+        public void isNotSidesMoreThanZeroTest()
+        {
+            Triangle tria = new Triangle(2.2, 0.0, 2.2);
+            Assert.IsFalse(tria.isSidesMoreThanZero()); ;
+        }
+
+        [TestMethod] // testar om isSidesMoreThanZero returnerar false för en triangel med sidan 0
+        public void isSidesLessThanZeroTest()
+        {
+            Triangle tria = new Triangle(-1.3, 3.2, 2.2);
+            Assert.IsFalse(tria.isSidesMoreThanZero());
+        }
+
         [TestMethod] // testar array konstruktorn
         public void arrayConstructorTest()
         {
             double[] arraySides;
             arraySides = new double[] { 1.3, 3.5, 2.3 };
             Triangle tria = new Triangle(arraySides);
-            //double[] correctArraySides;
-            //correctArraySides = tria.checkSides();
-
+            Assert.IsTrue(tria.isSidesMoreThanZero());
         }
 
         [TestMethod] // testar point konstruktorn
@@ -66,7 +85,7 @@ namespace UnitTestTri
             Point pointb = new Point(2, 3);
             Point pointc = new Point(3, 5);
             Triangle tria = new Triangle(pointa, pointb, pointc);
-            Assert.IsTrue(tria.isEquilateral());
+            Assert.IsTrue(tria.isSidesMoreThanZero());
         }
 
         [TestMethod] // testar array point konstruktorn
@@ -78,6 +97,7 @@ namespace UnitTestTri
             Point[] pointArray;
             pointArray = new Point[] {pointa, pointb, pointc};
             Triangle tria = new Triangle(pointArray);
+            Assert.IsTrue(tria.isSidesMoreThanZero());
             
         }
     }
