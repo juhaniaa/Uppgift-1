@@ -59,6 +59,10 @@ public class Triangle {
       return true;
     return false;
   }
+
+  public double[] checkSides() { 
+    return sides;
+  }
 }
 
 /* Exempel på användning: */

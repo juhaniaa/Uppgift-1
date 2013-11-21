@@ -47,7 +47,18 @@ namespace UnitTestTria
             Triangle tria = new Triangle(3.4, 3.4, 3.5);
             Assert.IsFalse(tria.isScalene());
         }
-        
+
+        [TestMethod]
+        public void arrayConstructorTest()
+        {
+            double[] arraySides;
+            arraySides = new double[] { 1.3, 3.5, 2.3 };
+            Triangle tria = new Triangle(arraySides);
+            double[] correctArraySides;
+            //correctArraySides = tria.checkSides();
+            
+        }
+
         [TestMethod]
         public void pointConstructorsTest()
         {
