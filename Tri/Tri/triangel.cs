@@ -48,10 +48,18 @@ public class Triangle {
     return false;
   }
 
-  public bool isEquilateral() {
+  public bool isEquilateral()
+  {
     if(uniqueSides()==3)
       return true;
     return false;
+  }
+
+  public bool isAnton()
+  {
+      if (uniqueSides() == 2)
+          return true;
+      return false;
   }
 
   public bool isIsosceles() {
@@ -59,6 +67,24 @@ public class Triangle {
       return true;
     return false;
   }
+
+  public bool myMethod1() {
+      return false;
+  }
+  public bool myMethod2()
+  {
+      return false;
+  }
+  public bool myMethod3()
+  {
+      return false;
+  }
+
+  public double[] checkSides() {
+      return sides;
+  }
+
+  
 }
 
 /* Exempel på användning: */

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A0E58269-DE88-4747-ADD3-74455A78DB67}</ProjectGuid>
+    <ProjectGuid>{402F34D1-225B-40D3-8A00-48205487951E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestTria</RootNamespace>
-    <AssemblyName>UnitTestTria</AssemblyName>
+    <RootNamespace>UnitTestTri</RootNamespace>
+    <AssemblyName>UnitTestTri</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tria\Tria.csproj">
-      <Project>{a3e6e22e-a6fd-4e71-a379-2e8b206f9977}</Project>
-      <Name>Tria</Name>
+    <ProjectReference Include="..\Tri\Tri.csproj">
+      <Project>{7f2d591a-03b6-42bd-a5e3-0ae63b10ec44}</Project>
+      <Name>Tri</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

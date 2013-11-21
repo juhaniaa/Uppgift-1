@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A3E6E22E-A6FD-4E71-A379-2E8B206F9977}</ProjectGuid>
+    <ProjectGuid>{7F2D591A-03B6-42BD-A5E3-0AE63B10EC44}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tria</RootNamespace>
-    <AssemblyName>Tria</AssemblyName>
+    <RootNamespace>Tri</RootNamespace>
+    <AssemblyName>Tri</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

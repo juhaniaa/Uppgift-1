@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestTria
+namespace UnitTestTri
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestTri
     {
         [TestMethod]
         public void isIsoscelesTest()
@@ -33,7 +33,7 @@ namespace UnitTestTria
             Triangle tria = new Triangle(2.1, 3.2, 3.2);
             Assert.IsFalse(tria.isEquilateral());
         }
-        
+
         [TestMethod]
         public void isScaleneTest()
         {
@@ -54,19 +54,34 @@ namespace UnitTestTria
             double[] arraySides;
             arraySides = new double[] { 1.3, 3.5, 2.3 };
             Triangle tria = new Triangle(arraySides);
-            double[] correctArraySides;
+            //double[] correctArraySides;
             //correctArraySides = tria.checkSides();
-            
+
+        }
+
+        [TestMethod]
+        public void IsAnton()
+        {
+            //should be == true
+            Triangle anton = new Triangle(1, 2, 2);
+            Assert.IsTrue(anton.isAnton());
         }
 
         [TestMethod]
         public void pointConstructorsTest()
         {
-            Point pointa = new Point(1,0);
-            Point pointb = new Point(2,3);
-            Point pointc = new Point(3,5);
+            Point pointa = new Point(1, 0);
+            Point pointb = new Point(2, 3);
+            Point pointc = new Point(3, 5);
             Triangle tria = new Triangle(pointa, pointb, pointc);
             Assert.IsTrue(tria.isEquilateral());
+        }
+
+        [TestMethod]
+        public void checkSidesTest()
+        {
+            Triangle tria = new Triangle(2.4, 3.1, 2.1);
+            tria.checkSides();
         }
     }
 }

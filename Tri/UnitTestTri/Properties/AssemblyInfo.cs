@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tria")]
+[assembly: AssemblyTitle("UnitTestTri")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Tria")]
+[assembly: AssemblyProduct("UnitTestTri")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("63a6aa67-c5d0-4b34-8029-06197222b907")]
+[assembly: Guid("b99672ea-5dd5-4c6e-bed4-8e9da968e213")]
 
 // Version information for an assembly consists of the following four values:
 //
