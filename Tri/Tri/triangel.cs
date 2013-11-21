@@ -87,8 +87,32 @@ public class Triangle {
       }
   }
 
+  private bool isTriangleWithArea(double[] theseSides)
+  {
+      int[] indexValue;
+      indexValue = new int[] {0, 1, 2};
+      double maxValue = theseSides.Max();
+      int maxIndex = theseSides.ToList().IndexOf(maxValue);
+      List<int> tmp = new List<int>(indexValue);
+      tmp.RemoveAt(maxIndex);
+      indexValue = tmp.ToArray();
+
+      if (maxValue < theseSides[indexValue[0]] + theseSides[indexValue[1]])
+      {
+          return true;
+      }
+      else
+      {
+          return false;
+      }
+  }
+
     public bool isCorrectTriangle(){
         if (!isSidesMoreThanZero(sides))
+        {
+            return false;
+        }
+        if (!isTriangleWithArea(sides))
         {
             return false;
         }
@@ -96,6 +120,7 @@ public class Triangle {
     }
 
 }
+
 
 /* Exempel på användning: */
 /* class Program { */
