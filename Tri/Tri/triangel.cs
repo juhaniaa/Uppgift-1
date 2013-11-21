@@ -16,12 +16,20 @@ public class Triangle {
 
   public Triangle(double a, double b, double c) {
     sides = new double[] { a, b, c };
+    if (!isCorrectTriangle()) {
+        throw new ArgumentException();
+    }
   } 
 
   public Triangle(double[] s) {
     sides = new double[s.Length];
-    for(int i=0;i<s.Length;i++)
+    for (int i = 0; i < s.Length; i++) { 
       sides[i]=s[i];
+    }
+    if (!isCorrectTriangle())
+    {
+        throw new ArgumentException();
+    }
   } 
 
   public Triangle(Point a, Point b, Point c) {
@@ -29,6 +37,10 @@ public class Triangle {
     sides[0] = Math.Sqrt(Math.Pow((double)(b.x - a.x), 2.0) + Math.Pow((double)(b.y - a.y), 2.0));
     sides[1] = Math.Sqrt(Math.Pow((double)(b.x - c.x), 2.0) + Math.Pow((double)(b.x - a.x), 2.0));
     sides[2] = Math.Sqrt(Math.Pow((double)(c.x - a.x), 2.0) + Math.Pow((double)(c.x - a.x), 2.0));
+    if (!isCorrectTriangle())
+    {
+        throw new ArgumentException();
+    }
   }
 
   public Triangle(Point[] s) {
@@ -36,6 +48,10 @@ public class Triangle {
     sides[0] = Math.Sqrt(Math.Pow((double)(s[1].x - s[0].x), 2.0) + Math.Pow((double)(s[1].y - s[0].y), 2.0));
     sides[1] = Math.Sqrt(Math.Pow((double)(s[1].x - s[2].x), 2.0) + Math.Pow((double)(s[1].x - s[2].x), 2.0));
     sides[2] = Math.Sqrt(Math.Pow((double)(s[2].x - s[0].x), 2.0) + Math.Pow((double)(s[2].x - s[0].x), 2.0));
+    if (!isCorrectTriangle())
+    {
+        throw new ArgumentException();
+    }
   }
 
   private int uniqueSides() {
@@ -60,8 +76,9 @@ public class Triangle {
     return false;
   }
 
-  public bool isSidesMoreThanZero() {
-      if (sides[0] > 0 && sides[1] > 0 && sides[2] > 0)
+
+  private bool isSidesMoreThanZero(double[] theseSides) {
+      if (theseSides[0] > 0 && theseSides[1] > 0 && theseSides[2] > 0)
       {
           return true;
       }
@@ -69,6 +86,15 @@ public class Triangle {
           return false;
       }
   }
+
+    public bool isCorrectTriangle(){
+        if (!isSidesMoreThanZero(sides))
+        {
+            return false;
+        }
+        return true;
+    }
+
 }
 
 /* Exempel på användning: */

@@ -48,25 +48,27 @@ namespace UnitTestTri
             Assert.IsFalse(tria.isScalene());
         }
 
-        [TestMethod] // testar om isSidesMoreThanZero returnerar true för en giltig triangel
-        public void isSidesMoreThanZeroTest()
+        [TestMethod] // testar om isCorrectTriangle returnerar true för en giltig triangel
+        public void isCorrectTriangleTest()
         {
             Triangle tria = new Triangle(2.2, 3.2, 2.2);
-            Assert.IsTrue(tria.isSidesMoreThanZero());
+            Assert.IsTrue(tria.isCorrectTriangle());
         }
 
-        [TestMethod] // testar om isSidesMoreThanZero returnerar false för en triangel med sidan 0
-        public void isNotSidesMoreThanZeroTest()
+        [TestMethod] // testar om isCorrectTriangle kastar ett undantag för en triangel med sidan 0
+        [ExpectedException(typeof(ArgumentException))]
+
+        public void isZeroSideCorrectTriangleTest()
         {
             Triangle tria = new Triangle(2.2, 0.0, 2.2);
-            Assert.IsFalse(tria.isSidesMoreThanZero()); ;
         }
 
-        [TestMethod] // testar om isSidesMoreThanZero returnerar false för en triangel med sidan 0
-        public void isSidesLessThanZeroTest()
+        [TestMethod] // testar om isCorrectTriangle kastar ett undantag för en triangel med negativ sida
+        [ExpectedException(typeof(ArgumentException))]
+
+        public void isNegativeSideCorrectTriangleTest()
         {
             Triangle tria = new Triangle(-1.3, 3.2, 2.2);
-            Assert.IsFalse(tria.isSidesMoreThanZero());
         }
 
         [TestMethod] // testar array konstruktorn
@@ -75,7 +77,7 @@ namespace UnitTestTri
             double[] arraySides;
             arraySides = new double[] { 1.3, 3.5, 2.3 };
             Triangle tria = new Triangle(arraySides);
-            Assert.IsTrue(tria.isSidesMoreThanZero());
+            Assert.IsTrue(tria.isCorrectTriangle());
         }
 
         [TestMethod] // testar point konstruktorn
@@ -85,10 +87,10 @@ namespace UnitTestTri
             Point pointb = new Point(2, 3);
             Point pointc = new Point(3, 5);
             Triangle tria = new Triangle(pointa, pointb, pointc);
-            Assert.IsTrue(tria.isSidesMoreThanZero());
+            Assert.IsTrue(tria.isCorrectTriangle());
         }
 
-        [TestMethod] // testar array point konstruktorn
+        [TestMethod] // testar array-point konstruktorn
         public void arrayPointConstructorTest()
         {
             Point pointa = new Point(1, 0);
@@ -97,7 +99,7 @@ namespace UnitTestTri
             Point[] pointArray;
             pointArray = new Point[] {pointa, pointb, pointc};
             Triangle tria = new Triangle(pointArray);
-            Assert.IsTrue(tria.isSidesMoreThanZero());
+            Assert.IsTrue(tria.isCorrectTriangle());
             
         }
     }
