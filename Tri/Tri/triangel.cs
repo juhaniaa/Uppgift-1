@@ -76,7 +76,7 @@ public class Triangle {
     return false;
   }
 
-
+  /* testar att triangeln alla sidor är har en längd större än 0 */
   private bool isSidesMoreThanZero(double[] theseSides) {
       if (theseSides[0] > 0 && theseSides[1] > 0 && theseSides[2] > 0)
       {
@@ -87,6 +87,7 @@ public class Triangle {
       }
   }
 
+  /* testar om triangeln har en area dvs längsta sidan är kortare än summan av de andra */
   private bool isTriangleWithArea(double[] theseSides)
   {
       int[] indexValue;
@@ -107,6 +108,7 @@ public class Triangle {
       }
   }
 
+    /* testar om triangeln är korrekt dvs har sidor < 0 och inte är en rak linje */
     public bool isCorrectTriangle(){
         if (!isSidesMoreThanZero(sides))
         {
